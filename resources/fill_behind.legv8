@@ -1,0 +1,18 @@
+start:
+ADDI X9, XZR, #256  // length of array
+ 
+// ADD X9, XZR, XZR // incrementing index
+ADD X10, XZR, XZR //
+ORR X13, XZR, X10
+
+SUB X11, X9, XZR // decrementing index - length = 0
+LSL, X11, X9, #
+CBZ X11, end_fill
+fill:
+STUR X9, [X10, #0] // set n = n -1 to arr[index]
+SUBI X9, X9, #1 //index
+ADDI X10, X10, #8 // i++
+B fill
+end_fill:
+LDUR X19, [X13, #17]
+PRNT X19

@@ -1,0 +1,1 @@
+sh scripts/build.sh && sh scripts/run.sh resources/fill.legv8.machine

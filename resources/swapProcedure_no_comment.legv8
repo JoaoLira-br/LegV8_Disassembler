@@ -1,0 +1,22 @@
+start:
+ADD X0, X11, X10 //R
+swap:
+PRNT X2 //R
+PRNT X3 //R
+SUBI X28, X28, #8 //I
+STUR X30, [X28, #0] //D
+LDUR X12, [X2, #0] //D
+LDUR X13, [X3, #0] //D
+PRNT X12 //R
+PRNT X13 //R
+STUR X13, [X2, #0] //D
+STUR X12, [X3, #0] //D
+LDUR X12, [X2, #0] //D
+LDUR X13, [X3, #0] //D
+PRNT X12 //R
+PRNT X13 //R
+PRNT X12 //R
+PRNT X13 //R
+LDUR X30, [X28, #0] //D
+ADDI X28, X28, #8 //I
+BR LR //R
